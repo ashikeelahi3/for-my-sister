@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 100vw;
+}
+
+.name{
+  min-height: 100vh;
+  background-color: #ffc107;
+}
+
+.love {
+  min-height: 100vh;
+  background-color: aqua;
+}
+
+ul {
+  position: absolute;
+  /* top: 50%;*/
+  left: 50%; 
+  transform: translate(-50%, -50%) skew(-25deg);
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border: 4px solid #ff0;
+  box-shadow: 0px 20px 10px rgba(0, 0, 0,.2);
+} 
+.love ul {
+  border: 4px solid blueviolet;
+}
+.name ul:nth-child(1){
+  left: 55%;
+  top: 45%;
+}
+.name ul:nth-child(2){
+  top: 55%;
+}
+.love ul:nth-child(1){
+  left: 60%;
+  top: 135%;
+}
+.love ul:nth-child(2){
+  left: 55%;
+  top: 150%;
+}
+.love ul:nth-child(3){
+  left: 48%;
+  top: 165%;
+}
+ul li{
+  position: relative;
+  list-style: none;
+  width: 30px;
+  height: 30px;
+  background: #ff0;
+  font-size: 1.5em;
+  color: rgba(0, 0, 0,.1);
+  text-align: center;
+  line-height: 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0 -1px;
+}
+.love li {
+  background: rgb(224, 102, 224);
+  color: aquamarine;
+}
+ul li::before {
+  content: attr(data-title);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #262626;
+  animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    top: -100%;
+  }
+  20% {
+    top: 0%;
+    background: transparent;
+    color: #262626;
+  }
+  40% {
+    top: 0%;
+    background: #262626;
+    color: #ff0;
+  }
+
+  60% {
+    top: 0%;
+    background: transparent;
+    color: #262626;
+  }
+
+  80% {
+    top: -20%;
+    background: transparent;
+    color: #262626;
+  }
+
+  100% {
+    top: 100%;
+  }
+}
+
+ul li:nth-child(1)::before {
+  animation-delay: 0s;
+}
+ul li:nth-child(2)::before {
+  animation-delay: 0.1s;
+}
+ul li:nth-child(3)::before {
+  animation-delay: 0.2s;
+}
+ul li:nth-child(4)::before {
+  animation-delay: 0.3s;
+}
+ul li:nth-child(5)::before {
+  animation-delay: 0.4s;
+}
+ul li:nth-child(6)::before {
+  animation-delay: 0.5s;
+}
+ul li:nth-child(7)::before {
+  animation-delay: 0.6s;
+}
+ul li:nth-child(8)::before {
+  animation-delay: 0.7s;
+}
+ul li:nth-child(9)::before {
+  animation-delay: 0.8s;
+}
+ul li:nth-child(10)::before {
+  animation-delay: 0.9s;
+}
+ul li:nth-child(11)::before {
+  animation-delay: 1s;
+}
